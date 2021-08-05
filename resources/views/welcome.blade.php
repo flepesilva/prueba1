@@ -7,6 +7,6 @@
     <title>Laravel repaso</title>
 </head>
 <body>
-    <h1>caca</h1>
+    <h1>cambie de rama xd</h1>
 </body>
 </html>
