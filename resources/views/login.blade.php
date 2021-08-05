@@ -9,5 +9,25 @@
 <body>
     @include('partials.nav')
     <h1>Login</h1>
+
+    <form method="POST">
+        @csrf
+        <label>
+            <input name="email" type="email" placeholder="Email...">
+        </label>
+        <br>
+        <label>
+            <input name="password" type="password" placeholder="Contraseña...">
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="remember">
+            Recuerda la sesion
+        </label>
+        <br>
+
+        <button type="submit">Login</button>
+
+    </form>
 </body>
 </html>
