@@ -9,11 +9,17 @@
 <body>
     @include('partials.nav')
     <h1>Login</h1>
-
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    @endif
     <form method="POST">
         @csrf
         <label>
-            <input name="email" type="email" placeholder="Email...">
+            <input name="email" type="text" required autofocus value="{{old('email')}}" placeholder="Email...">
         </label>
         <br>
         <label>
