@@ -50,4 +50,14 @@ class User extends Authenticatable
     protected $dates = [
         'admin_since',
     ];
+
+    public function orders()
+    {
+        return $this->hasManyThrough(Order::class, 'user_id ');
+    }
+
+    public function payments()
+    {   //hasManyThrough = tiene muchos a traves de...
+        return $this->hasManyThrough(Payment::class, Order::class, 'user_id');
+    }
 }
